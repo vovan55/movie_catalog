@@ -8,13 +8,15 @@
     tools:context=".MovieDetailsActivity">
 
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
+        android:id="@+id/iv_origin"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/orig"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="2dp" />
+        android:contentDescription="TODO" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
@@ -33,14 +35,15 @@
     <TextView
         android:id="@+id/tv_name_movie"
         android:layout_width="0dp"
-        android:layout_height="80dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="288dp"
+        android:layout_marginTop="248dp"
         android:layout_marginEnd="16dp"
         android:gravity="top"
         android:text="@string/name_movie"
         android:textAppearance="@style/name_movie"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -51,15 +54,15 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="226dp"
         android:layout_marginEnd="375dp"
-        android:layout_marginBottom="56dp"
         android:gravity="center_horizontal|center_vertical"
         android:text="@string/id_tv_age"
         android:textAppearance="@style/id_tv_age"
         android:textSize="12sp"
-        app:layout_constraintBottom_toTopOf="@id/guideline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/tv_name_movie"
+        android:layout_marginBottom="12dp"/>
 
     <TextView
         android:id="@+id/tag"
@@ -190,50 +193,95 @@
         android:layout_width="80dp"
         android:layout_height="32dp"
         android:layout_marginTop="4dp"
-        android:layout_marginEnd="4dp"
         android:text="@string/robert_down"
         android:textAppearance="@style/robert_down"
-        app:layout_constraintEnd_toStartOf="@+id/tv_chris_evans"
-        app:layout_constraintStart_toStartOf="@+id/guideline3"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintStart_toStartOf="@+id/view"
         app:layout_constraintTop_toBottomOf="@+id/view" />
 
     <TextView
         android:id="@+id/tv_chris_evans"
         android:layout_width="80dp"
         android:layout_height="32dp"
-        android:layout_marginStart="4dp"
         android:layout_marginTop="4dp"
-        android:layout_marginEnd="4dp"
         android:text="@string/chris_evans"
         android:textAppearance="@style/chris_evans"
-        app:layout_constraintEnd_toStartOf="@+id/tv_mark_ruffal"
-        app:layout_constraintStart_toEndOf="@+id/tv_robert_down"
+        app:layout_constraintEnd_toEndOf="@+id/view2"
+        app:layout_constraintStart_toStartOf="@+id/view2"
         app:layout_constraintTop_toBottomOf="@+id/view2" />
 
     <TextView
         android:id="@+id/tv_mark_ruffal"
         android:layout_width="80dp"
         android:layout_height="32dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="6dp"
+        android:layout_marginTop="4dp"
         android:text="@string/mark_ruffal"
         android:textAppearance="@style/mark_ruffal"
-        app:layout_constraintEnd_toStartOf="@+id/tv_chris_hemsw"
-        app:layout_constraintStart_toEndOf="@+id/tv_chris_evans"
+        app:layout_constraintEnd_toEndOf="@+id/view3"
+        app:layout_constraintStart_toStartOf="@+id/view3"
         app:layout_constraintTop_toBottomOf="@+id/view3" />
 
     <TextView
         android:id="@+id/tv_chris_hemsw"
         android:layout_width="80dp"
         android:layout_height="32dp"
-        android:layout_marginStart="4dp"
         android:layout_marginTop="6dp"
-        android:layout_marginEnd="15dp"
         android:text="@string/chris_hemsw"
         android:textAppearance="@style/chris_hemsw"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tv_mark_ruffal"
+        app:layout_constraintEnd_toEndOf="@+id/view4"
+        app:layout_constraintStart_toStartOf="@+id/view4"
         app:layout_constraintTop_toBottomOf="@+id/view4" />
+
+    <View
+        android:id="@+id/view_star1"
+        android:layout_width="15dp"
+        android:layout_height="14dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/ic_star"
+        app:layout_constraintEnd_toStartOf="@+id/view_star2"
+        app:layout_constraintStart_toEndOf="@+id/view_star"
+        app:layout_constraintTop_toBottomOf="@+id/tag" />
+
+    <View
+        android:id="@+id/view_star2"
+        android:layout_width="15dp"
+        android:layout_height="14dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/ic_star"
+        app:layout_constraintStart_toEndOf="@+id/view_star1"
+        app:layout_constraintTop_toBottomOf="@+id/tag" />
+
+    <View
+        android:id="@+id/view_star"
+        android:layout_width="15dp"
+        android:layout_height="14dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/ic_star"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tag" />
+
+    <View
+        android:id="@+id/view_star3"
+        android:layout_width="15dp"
+        android:layout_height="14dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/ic_star"
+        app:layout_constraintStart_toEndOf="@+id/view_star2"
+        app:layout_constraintTop_toBottomOf="@+id/tag" />
+
+    <View
+        android:id="@+id/view_star4"
+        android:layout_width="15dp"
+        android:layout_height="14dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/ic_star_grey"
+        app:layout_constraintStart_toEndOf="@+id/view_star3"
+        app:layout_constraintTop_toBottomOf="@+id/tag" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -141,4 +141,13 @@
         </item>
     </style>
 
+    <style name="raiting">
+        <item name="android:numStars">
+            5
+        </item>
+        <item name="android:textColor">
+            #FF3365
+        </item>
+    </style>
+
 </resources>
