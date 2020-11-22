@@ -7,13 +7,14 @@
     android:background="@color/BG"
     tools:context=".MovieDetailsActivity">
 
-    <View
-        android:layout_width="375dp"
-        android:layout_height="298dp"
-        android:background="@drawable/orig"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/orig"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="2dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
