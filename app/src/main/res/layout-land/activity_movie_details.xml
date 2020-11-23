@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    android:isScrollContainer="true">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     android:background="@color/BG"
     tools:context=".MovieDetailsActivity">
 
@@ -15,7 +21,6 @@
         android:contentDescription="TODO"
         android:scaleType="fitXY"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/orig" />
@@ -55,6 +60,7 @@
         android:layout_height="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginBottom="12dp"
+        android:gravity="center_horizontal|center_vertical"
         android:text="@string/id_tv_age"
         android:textAppearance="@style/id_tv_age"
         android:textSize="12sp"
@@ -280,6 +286,5 @@
         app:layout_constraintStart_toEndOf="@+id/view_star3"
         app:layout_constraintTop_toBottomOf="@+id/tag" />
 
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
