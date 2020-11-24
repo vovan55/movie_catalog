@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    android:isScrollContainer="true">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     android:background="@color/BG"
     tools:context=".MovieDetailsActivity">
 
@@ -13,9 +19,8 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:contentDescription="TODO"
-        android:scaleType="fitXY"
+        android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/orig" />
@@ -55,6 +60,7 @@
         android:layout_height="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginBottom="12dp"
+        android:gravity="center_horizontal|center_vertical"
         android:text="@string/id_tv_age"
         android:textAppearance="@style/id_tv_age"
         android:textSize="12sp"
@@ -130,49 +136,59 @@
 
     <View
         android:id="@+id/view"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="8dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1:1"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="7dp"
         android:layout_marginEnd="4dp"
         android:background="@drawable/robert_downey"
         app:layout_constraintEnd_toStartOf="@+id/view2"
+        app:layout_constraintHorizontal_weight="1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_cast" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_cast"
+        app:layout_constraintVertical_weight="0" />
 
     <View
         android:id="@+id/view2"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1:1"
         android:layout_marginStart="4dp"
         android:layout_marginTop="7dp"
         android:layout_marginEnd="4dp"
         android:background="@drawable/chris_evans"
         app:layout_constraintEnd_toStartOf="@+id/view3"
+        app:layout_constraintHorizontal_weight="1"
         app:layout_constraintStart_toEndOf="@+id/view"
-        app:layout_constraintTop_toBottomOf="@+id/tv_cast" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_cast"
+        app:layout_constraintVertical_weight="0" />
 
     <View
         android:id="@+id/view3"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1:1"
         android:layout_marginStart="4dp"
         android:layout_marginTop="7dp"
         android:layout_marginEnd="4dp"
         android:background="@drawable/mark_ruffal"
         app:layout_constraintEnd_toStartOf="@+id/view4"
+        app:layout_constraintHorizontal_weight="1"
         app:layout_constraintStart_toEndOf="@+id/view2"
         app:layout_constraintTop_toBottomOf="@+id/tv_cast" />
 
     <View
         android:id="@+id/view4"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1:1"
         android:layout_marginStart="4dp"
         android:layout_marginTop="7dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/chris_hemsw"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
         app:layout_constraintStart_toEndOf="@+id/view3"
         app:layout_constraintTop_toBottomOf="@+id/tv_cast" />
 
@@ -185,7 +201,7 @@
 
     <TextView
         android:id="@+id/tv_robert_down"
-        android:layout_width="80dp"
+        android:layout_width="0dp"
         android:layout_height="32dp"
         android:layout_marginTop="4dp"
         android:text="@string/robert_down"
@@ -196,7 +212,7 @@
 
     <TextView
         android:id="@+id/tv_chris_evans"
-        android:layout_width="80dp"
+        android:layout_width="0dp"
         android:layout_height="32dp"
         android:layout_marginTop="4dp"
         android:text="@string/chris_evans"
@@ -207,7 +223,7 @@
 
     <TextView
         android:id="@+id/tv_mark_ruffal"
-        android:layout_width="80dp"
+        android:layout_width="0dp"
         android:layout_height="32dp"
         android:layout_marginTop="4dp"
         android:text="@string/mark_ruffal"
@@ -218,7 +234,7 @@
 
     <TextView
         android:id="@+id/tv_chris_hemsw"
-        android:layout_width="80dp"
+        android:layout_width="0dp"
         android:layout_height="32dp"
         android:layout_marginTop="6dp"
         android:text="@string/chris_hemsw"
@@ -278,6 +294,5 @@
         app:layout_constraintStart_toEndOf="@+id/view_star3"
         app:layout_constraintTop_toBottomOf="@+id/tag" />
 
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
