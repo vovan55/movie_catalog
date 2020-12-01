@@ -24,5 +24,7 @@
     <string name="chris_evans">Chris\nEvans</string>
     <string name="mark_ruffal">Mark\nRuffalo</string>
     <string name="chris_hemsw">Chris Hemsworth</string>
+    <string name="movie_poster">origin</string>
+
 
 </resources>
