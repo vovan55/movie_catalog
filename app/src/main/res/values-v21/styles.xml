@@ -42,6 +42,16 @@
         </item>
     </style>
 
+    <style name="tag_fragment">
+        <item name="android:textSize">
+            8sp
+        </item>
+        <item name="android:textColor">
+            #FF3466
+        </item>
+    </style>
+
+
     <style name="reviews">
         <item name="android:textSize">
             14sp
@@ -147,6 +157,43 @@
         </item>
         <item name="android:textColor">
             #FF3365
+        </item>
+    </style>
+
+    <style name="fragment_movie">
+        <item name="android:textSize">
+            14sp
+        </item>
+
+        <item name="android:textColor">
+            #ECECEC
+        </item>
+    </style>
+
+    <style name="min">
+        <item name="android:textSize">
+            8sp
+        </item>
+        <item name="android:textColor">
+            #565665
+        </item>
+    </style>
+
+    <style name="reviews_fragment">
+        <item name="android:textSize">
+            8sp
+        </item>
+        <item name="android:textColor">
+            #6D6D80
+        </item>
+    </style>
+
+    <style name="age">
+        <item name="android:textSize">
+            12sp
+        </item>
+        <item name="android:textColor">
+            #FFFFFF
         </item>
     </style>
 

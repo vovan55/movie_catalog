@@ -11,6 +11,7 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 
     <string name="name_movie">Avengers:\nEnd Game</string>
+    <string name="name_movie_fragment">Avengers: End Game</string>
     <string name="id_tv_age">13+</string>
     <string name="tag">Action, Adventure, Fantasy</string>
     <string name="reviews">125 Reviews</string>
@@ -24,5 +25,7 @@
     <string name="chris_evans">Chris\nEvans</string>
     <string name="mark_ruffal">Mark\nRuffalo</string>
     <string name="chris_hemsw">Chris Hemsworth</string>
+    <string name="min">137 min</string>
+    <string name="tag_fragment">Action, Adventure, Drama</string>
 
 </resources>
